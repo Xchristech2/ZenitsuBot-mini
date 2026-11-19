@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zenitsu Bot — Pair</title>
+</head>
+<body style="font-family:sans-serif;max-width:400px;margin:50px auto">
+  <h2>⚡ Zenitsu Bot</h2>
+  <p>Enter WhatsApp number with country code (no + or spaces)</p>
+  <input id="phone" placeholder="2348012345678" style="width:100%;padding:10px">
+  <button onclick="pair()" style="width:100%;padding:10px;margin-top:10px">Get Pair Code</button>
+  <h3 id="out" style="color:green"></h3>
+
+<script>
+async function pair() {
+  const phone = document.getElementById('phone').value.trim()
+  const out = document.getElementById('out')
+  out.innerText = 'Generating...'
+  try {
+    const res = await fetch('/pair', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone })
+    })
+    const data = await res.json()
+    if (data.pairingCode) {
+      out.innerText = 'Code: ' + data.pairingCode
+    } else {
+      out.innerText = data.message || data.error
+    }
+  } catch (e) {
+    out.innerText = e.message
+  }
+}
+</script>
+</body>
+</html>
