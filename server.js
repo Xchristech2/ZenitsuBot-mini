@@ -23,7 +23,7 @@ const {
 } = require('./main');
 
 // ==================================================
-// LABAN-XMD CONFIGURATION
+// Zenitsubot-Mini CONFIGURATION
 // ==================================================
 
 const app = express();
