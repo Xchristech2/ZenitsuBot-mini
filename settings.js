@@ -6,7 +6,7 @@ const settings = {
   botName: 'Zenitsu Bot',
   botOwner: process.env.BOT_OWNER || 'Zenitsu Bot',
   // Set OWNER_NUMBER in your hosting environment or .env (country code, digits only).
-  ownerNumber: process.env.OWNER_NUMBER || '254XXXXXXXXX',
+  ownerNumber: process.env.OWNER_NUMBER || '234XXXXXXXXX',
   giphyApiKey: process.env.GIPHY_API_KEY || '',
   commandMode: 'public',
   maxStoreMessages: 20,
