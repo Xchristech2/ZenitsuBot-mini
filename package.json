@@ -1,7 +1,7 @@
 {
-  "name": "ZenitsuBot-Mini",
+  "name": "laban-xmd",
   "version": "1.0.0",
-  "description": "ZENITSU-BOT multi-user WhatsApp bot command package",
+  "description": "LABAN-XMD multi-user WhatsApp bot command package",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
